@@ -4,7 +4,7 @@ EasyRxJava
 ## explain
 用于理解RxJava而做的一个简易的EasyRxJava。
 
-代码里给出了不同难易程度的EasyRxJava，easy1最简单，数字越大越难。
+代码里给出了不同难易程度的EasyRxJava，easy1最简单，数字越大越难。（自己也在不断学习理解，不断更新中）
 
 可以参考文章：https://www.jianshu.com/p/88aacbed8aa5
 
