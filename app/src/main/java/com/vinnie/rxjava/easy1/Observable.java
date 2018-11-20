@@ -6,7 +6,7 @@ public class Observable<T> {
 
     final ObservableOnSubscribe<T> source;
 
-    public Observable(ObservableOnSubscribe<T> source) {
+    private Observable(ObservableOnSubscribe<T> source) {
         this.source = source;
     }
 
