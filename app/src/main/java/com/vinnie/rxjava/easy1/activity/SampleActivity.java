@@ -18,10 +18,38 @@ public class SampleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        test();
+
+        test1();
+        test2();
     }
 
-    private void test() {
+    private void test1() {
+        Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(@NonNull Observer<String> observer) throws Exception {
+                observer.onNext("111");
+                observer.onNext("222");
+                observer.onComplete();
+            }
+        }).subscribe(new Observer<String>() {
+            @Override
+            public void onNext(@NonNull String s) {
+                Log.e(TAG, "onNext " + s);
+            }
+
+            @Override
+            public void onComplete() {
+                Log.e(TAG, "onComplete");
+            }
+
+            @Override
+            public void onError(Throwable error) {
+                Log.e(TAG, "onError");
+            }
+        });
+    }
+
+    private void test2() {
         Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(@NonNull Observer<String> observer) throws Exception {
@@ -32,7 +60,7 @@ public class SampleActivity extends AppCompatActivity {
         }).map(new Function<String, String>() {
             @Override
             public String apply(@NonNull String s) throws Exception {
-                return "aaa " + s;
+                return "map " + s;
             }
         }).subscribe(new Observer<String>() {
             @Override

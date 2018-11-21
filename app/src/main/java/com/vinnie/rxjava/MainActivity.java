@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.easy1:
                 startActivity(new Intent(this, com.vinnie.rxjava.easy1.activity.SampleActivity.class));
                 break;
+            case R.id.easy2:
+                startActivity(new Intent(this, com.vinnie.rxjava.easy2.activity.SampleActivity.class));
+                break;
         }
     }
 }
