@@ -29,6 +29,15 @@
             android:text="EASY 2 TEST"
             android:onClick="click"/>
 
+        <Button
+            android:id="@+id/easy3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="EASY 3 TEST"
+            android:onClick="click"/>
+
     </LinearLayout>
 
 </ScrollView>
